@@ -1,5 +1,5 @@
 import React from "react";
-import Boton from "./Boton/boton";
+import Boton from "./Boton/Boton";
 import './BotonLabs.css';
 
 

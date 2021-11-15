@@ -4,7 +4,7 @@ import Reserva from "../../ReservaLab/ReservaLab";
 import './boton.css';
 
 
-const boton = function() {
+const Boton = function() {
 
     const [isOpenE, setIsOpenE] = useState(false);
 
@@ -33,4 +33,4 @@ const boton = function() {
         );
 }
 
-export default boton;
+export default Boton;
