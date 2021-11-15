@@ -1,0 +1,49 @@
+.ElContainer{
+    display: none;
+    background-color: rgb(0, 0, 0, .85);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.El-Dialog{
+    background-color: #fff;
+    margin: 2rem;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.Buttons{
+    margin: 1.3rem;
+    padding: 1.3rem;
+}
+
+.Buttons button{
+    margin: 0.7rem;
+    padding: 0.3rem 1.6rem;
+    background-color: rgb(180, 30, 30);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.ElContainer-Open{
+    display: flex;
+    width: 100vw;
+}
+
+.TituloEl{
+    margin: 0.5rem 0.5rem;
+    padding: 2.2rem 0.4rem;
+}
+
+.SubTitEl{
+    margin: 0.3rem;
+}

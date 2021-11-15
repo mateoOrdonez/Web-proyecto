@@ -1,0 +1,38 @@
+.TbContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.Tabla{
+    width: 100%;
+    max-width: 63vw;
+    margin: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+    border-radius: 20px 20px 0 0;
+}
+
+.TrHeader{
+    background-color: rgb(185, 28, 28);
+    margin: auto;
+    width: 100%;
+    max-width: 63vw;
+}
+
+.TrHeader th{
+    padding: 0.4rem 4.02rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.TrBody{
+    width: 100%;
+    max-width: 63vw;
+}
+
+.TrBody td{
+    border: 1px solid black;
+    padding: 0.4rem 4.02rem;
+    font-size: 1rem;
+}

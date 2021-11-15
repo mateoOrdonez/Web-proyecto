@@ -1,0 +1,49 @@
+.o_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.o_inicio{
+    width: 45%;
+    font-size: 24px;
+    color: #9D9D9D; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.o_inicio h2{
+    color: black;
+    font-size: 40px;
+}
+
+.o_inicio p{
+    margin: 0;    
+}
+
+.o_inicio input{
+    font-size: 24px;
+    border-radius: 2rem;
+    border: solid 1px #9D9D9D;
+    color: black;
+    text-align: center;
+    outline: none;
+    padding: 4px 0;
+    margin-bottom: 2rem;
+}
+
+.o_inicio input::placeholder{
+    
+    color: #9D9D9D;
+}
+
+.o_imgback{
+    background-image: url(../../images/image2.png);
+    background-size: cover;
+    background-position: center center;
+    width: 55%;
+    height: 100vh;
+    z-index: -1;
+}

@@ -1,0 +1,19 @@
+.containerBl{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+    padding: 2rem 3rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.spaceText {
+    margin-right: 35rem;
+}
+
+.text{
+    margin: 0px ;
+}

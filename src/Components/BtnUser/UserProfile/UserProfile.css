@@ -1,0 +1,40 @@
+.UserContainer{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 35.8vh;
+    right: 0;
+    z-index: 9999;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.User-Dialog{
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1px;
+    width: 127px;
+    height: 85px;
+    border: 1px solid black;
+}
+
+.ButtonsUs{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+}
+
+.ButtonsUs .Btn{
+    width: 125px;
+    margin: -0.1rem;
+    padding: 0.3rem 1rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.UserContainer-Open{
+    display: flex;
+    width: 100vw;
+}
