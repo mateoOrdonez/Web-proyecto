@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import UserAccount from "../../Img/user-account.png"
 import LogoUao from "../../Img/UAO-logo-acreditacion.png"
 import BtnUser from "../BtnUser/BtnUser";
@@ -10,7 +11,9 @@ const Navbar = function() {
     <div className="Nav">
         <div className="NavContainer">
             <div>
-                <img src={LogoUao}/>
+                <Link to = "/Principal">
+                    <img src={LogoUao}/>
+                </Link>
             </div>
             <div>
                 <BtnUser ImgUs={UserAccount}></BtnUser>

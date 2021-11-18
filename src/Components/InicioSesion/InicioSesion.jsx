@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './InicioSesion.module.css'
 import Boton from './Boton/Boton';
+import { Link } from 'react-router-dom'
 
 function InicioSesion() {
     return (
@@ -14,7 +15,9 @@ function InicioSesion() {
                 <input type="email" placeholder="Nombre de usuario" name="" id="" />
                 <input type="password" placeholder="Contraseña" name="" id="" />
                 <p>¿Has olvidado tu contraseña?</p>
-                <Boton text="Acceder"/>
+                <Link to = "/Principal" className="Btn">
+                    <Boton text="Acceder"/>
+                </Link>
             </div>
         </div>
     );

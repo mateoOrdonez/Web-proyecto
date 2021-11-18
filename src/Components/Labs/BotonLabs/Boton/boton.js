@@ -19,7 +19,7 @@ const Boton = function() {
         return(
             <div>
                 <div>
-                    <Button onClick={openE}>
+                    <Button onClick={openE} className="BtnReservaBack"> 
                         <h3 className="BtnReserva"> Ir </h3>
                     </Button>
                 </div>

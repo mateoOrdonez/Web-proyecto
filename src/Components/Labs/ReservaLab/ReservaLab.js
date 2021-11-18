@@ -9,29 +9,28 @@ const ReservaLab = ({isOpenE, closeE}) =>{
     return(
     <div className={`ReservaContainer ${isOpenE && 'ReservaContainer-Open'}`}>
         <div className="Reservar-Dialog">
-            <h2 className="TituloReservar">Reservar laboratorio Física 1</h2>
+            <h2 className="TituloReservar">Reserva Laboratorio</h2>
             <h3 className="SubTitReservar">Fecha de reserva</h3>
-            <input
-                type="text"
+            <input className="InputReservar"
+                type="date"
                 placeholder="Fecha de reserva"
-                ref={ref}
-                onChange={(e) => console.log(e.target.value)}
-                onFocus={() => (ref.current.type = "date")}
-                onBlur={() => (ref.current.type = "text")}
+                min="2021-11-18" max="2022-06-01"
             />
             <h3 className="SubTitReservar">Hora de reserva</h3>
-            <input
-                type="text"
+            <input className="InputReservar"
+                type="time"
                 placeholder="Hora"
+                min="07:00" max="18:00" step="600"
             />
             <h3 className="SubTitReservar">Duración</h3>
-            <input
-                type="text"
+            <input className="InputReservar"
+                type="number"
                 placeholder="Duración"
+                min="0" max="4"
             />
             <div className="ButtonsReservar">
-                <button>Si</button>
-                <button onClick={closeE}>No</button>
+                <button>Reservar</button>
+                <button onClick={closeE}>Cancelar</button>
             </div>
         </div>
     </div>

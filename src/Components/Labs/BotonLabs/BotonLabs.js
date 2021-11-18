@@ -3,11 +3,11 @@ import Boton from "./Boton/Boton";
 import './BotonLabs.css';
 
 
-function BotonLabs () {
+function BotonLabs ({text}) {
     return(
         <div className = "containerBl">
             <div className ="spaceText">
-                <h3 className = "text ">Laboratorios Física 1</h3>
+                <h3 className = "text ">{text}</h3>
             </div>
             
             <Boton />

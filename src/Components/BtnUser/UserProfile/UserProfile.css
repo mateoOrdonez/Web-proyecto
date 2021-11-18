@@ -16,7 +16,6 @@
     padding: 1px;
     width: 127px;
     height: 85px;
-    border: 1px solid black;
 }
 
 .ButtonsUs{
@@ -27,7 +26,7 @@
 
 .ButtonsUs .Btn{
     width: 125px;
-    margin: -0.1rem;
+    margin: 0rem;
     padding: 0.3rem 1rem;
     border: 1px solid black;
     border-collapse: collapse;

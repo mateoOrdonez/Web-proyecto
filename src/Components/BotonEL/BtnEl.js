@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Icon } from 'semantic-ui-react'
 import Eliminar from "../Eliminar/Eliminar";
 
-
 const BtnEl = function() {
 
     const [isOpenE, setIsOpenE] = useState(false);
