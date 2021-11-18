@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Icon } from 'semantic-ui-react'
 import Reserva from "../../ReservaLab/ReservaLab";
-import './boton.css';
+import './Boton.css';
 
 
 const Boton = function() {
