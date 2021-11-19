@@ -49,34 +49,8 @@ class Tabla extends React.Component{
     handleUpdate(Mr){
         this.setState({ MisReservas: Mr });
     }
-
-    /*constructor(){
-        super();
-        this.state ={
-            isOpenE: false,
-            setIsOpenE: false
-        };
-    }
-    
-    openE = () =>{
-
-        this.setState ({
-            isOpenE: true,
-            setIsOpenE: true
-        });
-
-    }
-
-    CloseE = () =>{
-
-        this.setState ({
-            isOpenE: false,
-            setIsOpenE: false
-        });
-    }*/
     
     render() {
-        {/*const{isOpenE} = this.state*/}
         return(
             <div className="TbContainer">
                     <table className="Tabla">
@@ -86,18 +60,21 @@ class Tabla extends React.Component{
                             <th>Descripción</th>
                             <th>Opciones</th>
                         </tr>
-                        {/*{this.state.MisReservas && this.state.MisReservas.map(data =>{
-                                console.log(data);*/}
-                            {/*return(*/}
-                                <tr className="TrBody">
-                                    <td>fecha</td>
-                                    <td>hora</td>
-                                    <td>descripcion</td>
+                        {Object.keys(this.state.MisReservas).map(data =>{
+                                console.log(data);
+                            return(
+                                <tr className="TrBody" key={data}>
+                                    <td>{this.state.MisReservas[data].fecha}</td>
+                                    <td>{this.state.MisReservas[data].hora}</td>
+                                    <td>{this.state.MisReservas[data].descripcion}</td>
                                     <td>
                                         <BtnEl></BtnEl>
-                                    
                                     </td>
                                 </tr>
+                                                                
+                                );
+                            })
+                        }
                     </table> 
             </div>
         );
