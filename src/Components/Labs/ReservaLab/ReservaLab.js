@@ -20,6 +20,7 @@ class ReservaLab extends React.Component {
         results.post('/Labs.json', Data).then(response => {
             console.log(response);
         })
+        this.close = this.props.closeE(this);
     }
     
 
