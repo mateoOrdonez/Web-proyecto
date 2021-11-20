@@ -17,17 +17,29 @@ class Tabla extends React.Component{
     constructor(props){
         super(props);
         this.state =({
-            MisReservas:([])
+            MisReservas:([]),
+            id: 0
         })
     }
 
     componentDidMount() {
+        this.peticionGet();
+    }
 
-        //const db = getDatabase();
-        //const r = ref(db, 'proyectofinalweb-2c536-default-rtdb');
+    handleUpdate(Mr){
+        this.setState({ MisReservas: Mr });
+    }
 
-          const dbRef = ref(getDatabase());
-            get(dbRef, "proyectofinalweb-2c536-default-rtdb").then((snapshot) => {
+    /*seleccionarReserva=async(id, caso)=>{
+        await this.setState({id: id});
+
+        (caso==="Editar")?this.setState():
+        this.peticionDelete();
+    }*/ 
+
+    peticionGet(){
+        const dbRef = ref(getDatabase());
+            get(dbRef, "proyectofinalweb-2c536-default-rtdb/Reservas").then((snapshot) => {
             let MiReserva = ([]);
             if (snapshot.exists()) {
                 console.log(snapshot.val());
@@ -43,14 +55,17 @@ class Tabla extends React.Component{
             }).catch((error) => {
             console.error(error);
             });
-      
     }
 
-    handleUpdate(Mr){
-        this.setState({ MisReservas: Mr });
-    }
+
+    /*peticionDelete(){
+        const db = getDatabase();
+        const eliminar= remove(ref(db), `proyectofinalweb-2c536-default-rtdb/Reservas/${this.state.id}`);
+        return eliminar
+    }*/
     
     render() {
+        {/*const pDel =this.peticionDelete();*/}
         return(
             <div className="TbContainer">
                     <table className="Tabla">

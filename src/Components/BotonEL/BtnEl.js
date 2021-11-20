@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Icon } from 'semantic-ui-react'
 import Eliminar from "../Eliminar/Eliminar";
 
-const BtnEl = function() {
+const BtnEl = function({del, edit}) {
 
     const [isOpenE, setIsOpenE] = useState(false);
 
@@ -35,6 +35,7 @@ const BtnEl = function() {
                     {isOpenE && <Eliminar 
                         isOpenE={isOpenE} 
                         closeE={CloseE}
+                        Delete={del}
                     />}
                 </div>
             </div>
