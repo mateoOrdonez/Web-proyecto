@@ -2,14 +2,10 @@ import React from "react";
 import BtnEl from "../BotonEL/BtnEl";
 import "./Tabla.css";
 import fb from "../../Utils/Firebase"
-import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { getDatabase, ref, onValue, get, child } from "firebase/database";
 
-// These imports load individual services into the firebase namespace.
-import 'firebase/auth';
+import { getDatabase, ref, onValue, get, child } from "firebase/database";
 import 'firebase/database';
-import 'firebase/firestore';
-import 'firebase/storage';
+import axios from "axios";
 
 
 class Tabla extends React.Component{
@@ -57,6 +53,21 @@ class Tabla extends React.Component{
             });
     }
 
+    handleChange = event => {
+        this.setState({ id: event.target.value });
+      }
+    
+      handleSubmit = event => {
+        
+    
+        axios.delete(`https://console.firebase.google.com/u/0/project/proyectofinalweb-2c536/database/proyectofinalweb-2c536-default-rtdb/data/Labs/-Mouuiw4zIA7uZ0AB38i${this.state.id}`)
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+      }
+    
+
 
     /*peticionDelete(){
         const db = getDatabase();
@@ -65,7 +76,7 @@ class Tabla extends React.Component{
     }*/
     
     render() {
-        {/*const pDel =this.peticionDelete();*/}
+        const pDel =this.handleSubmit();
         return(
             <div className="TbContainer">
                     <table className="Tabla">
@@ -73,7 +84,6 @@ class Tabla extends React.Component{
                             <th>Fecha</th>
                             <th>Hora</th>
                             <th>Descripción</th>
-                            <th>Opciones</th>
                         </tr>
                         {Object.keys(this.state.MisReservas).map(data =>{
                                 console.log(data);
@@ -82,9 +92,6 @@ class Tabla extends React.Component{
                                     <td>{this.state.MisReservas[data].fecha}</td>
                                     <td>{this.state.MisReservas[data].hora}</td>
                                     <td>{this.state.MisReservas[data].descripcion}</td>
-                                    <td>
-                                        <BtnEl></BtnEl>
-                                    </td>
                                 </tr>
                                                                 
                                 );
