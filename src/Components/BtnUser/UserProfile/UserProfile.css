@@ -31,6 +31,7 @@
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 0;
+    background-color: #fff;
 }
 
 .UserContainer-Open{
