@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Eliminar.css";
 
-const Eliminar = ({isOpenE, closeE}) =>{
+const Eliminar = ({isOpenE, closeE, Delete}) =>{
 
     return(
     <div className={`ElContainer ${isOpenE && 'ElContainer-Open'}`}>
@@ -9,7 +9,7 @@ const Eliminar = ({isOpenE, closeE}) =>{
             <h2 className="TituloEl">Eliminar Reserva</h2>
             <h3 className="SubTitEl">¿Desea eliminar la reserva?</h3>
             <div className="Buttons">
-                <button>Si</button>
+                <button onClick={Delete}>Si</button>
                 <button onClick={closeE}>No</button>
             </div>
         </div>
